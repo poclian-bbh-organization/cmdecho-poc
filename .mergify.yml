@@ -1,0 +1,11 @@
+queue_rules:
+  - name: default
+    merge_conditions: []
+
+pull_request_rules:
+  - name: welcome echo
+    conditions:
+      - -closed
+    actions:
+      comment:
+        message: "Thanks for the contribution. Title was: {{ title }}"
